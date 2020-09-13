@@ -60,7 +60,7 @@ export default {
     process() {
       localStorage.setItem('responses', JSON.stringify(this.responses))
       if (this.responses.length >= this.questions.length) {
-        // this.moveEvent = setTimeout(() => this.$router.push('/loading'), 500)
+        this.moveEvent = setTimeout(() => this.$router.push('/loading'), 500)
       }
     }
   },

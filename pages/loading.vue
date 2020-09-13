@@ -13,9 +13,10 @@ import loading from '@/assets/loading.js'
 export default {
   asyncData() {
     const responses = JSON.parse(localStorage.getItem('responses')) || null
+
     let count = -1;
     if (responses) {
-      count = responses.filter(response => response === 'O').length
+      count = responses.reduce((accumulator, currentValue) => accumulator + currentValue)
     }
 
     count = count === 0 ? 1 : count

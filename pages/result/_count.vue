@@ -4,15 +4,16 @@
     <h1 class="promotion-title">BADGIRL LIFE STYLE</h1>
     <h2 class="result">
       당신의 남자친구가 성적으로 만족할 확률은<br>
-      <em class="result-probability">{{ result.title }}%</em> 입니다.</h2>
-    <div class="result-visualization" v-html="result.symbol"></div>
-    <p class="result-contents" v-html="result.content"></p>
-    <h3 class="turning-point">[Turning Point]</h3>
-    <strong class="turning-point-title">{{ result.turningPoint.title }}</strong>
-    <p class="turning-point-contents" v-html="result.turningPoint.content"></p>
-    <a class="banner-link" href="http://www.badgirllifestyle.co.kr">
-      <img class="banner-image" src="@/static/BLS/images/banner50.png" width="100%" height="100%">
-    </a>
+      <em class="result-probability">{{ result.chance }}%</em> 입니다.</h2>
+    <p class="result-contents" v-html="result.explain"></p>
+    <h3 class="turning-point">[재회 꿀팁]</h3>
+    <p class="turning-point-contents" v-html="result.honeyTip"></p>
+    <aside>
+      <strong>매력에 대한 자세한 이해를 원한다면?</strong>
+      매력이란? - <a href="https://cafe.naver.com/dabidonline/22601">칼럼 보러가기</a>
+
+      더욱 디테일한 재회의 기술 - <a href="https://cafe.naver.com/dabidonline?iframe_url=/ArticleList.nhn%3Fsearch.clubid=21278291%26search.menuid=177%26search.boardtype=W">칼럼 보러가기</a>
+    </aside>
   </div>
 </div>
 </template>
@@ -25,9 +26,7 @@ export default {
     const isNumber = /^\d+$/.test(params.count)
     const parsedNumber = Number(params.count)
     const isOverMinus = parsedNumber > 0
-    const isUnderMaxCount = parsedNumber <= SEX.questions.length
-    const isValidate = isNumber && isOverMinus && isUnderMaxCount
-
+    const isValidate = isNumber && isOverMinus
     return isValidate
   },
   asyncData(app) {
