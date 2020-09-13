@@ -3,16 +3,19 @@
   <div class="viewport">
     <h1 class="promotion-title">BADGIRL LIFE STYLE</h1>
     <h2 class="result">
-      당신의 남자친구가 성적으로 만족할 확률은<br>
-      <em class="result-probability">{{ result.chance }}%</em> 입니다.</h2>
+      당신이 남자친구와 재회할 수 있는 확률은<br>
+      <em class="result-probability">{{ result.probability }}%</em> 입니다.</h2>
     <p class="result-contents" v-html="result.explain"></p>
     <h3 class="turning-point">[재회 꿀팁]</h3>
     <p class="turning-point-contents" v-html="result.honeyTip"></p>
-    <aside>
-      <strong>매력에 대한 자세한 이해를 원한다면?</strong>
-      매력이란? - <a href="https://cafe.naver.com/dabidonline/22601">칼럼 보러가기</a>
-
-      더욱 디테일한 재회의 기술 - <a href="https://cafe.naver.com/dabidonline?iframe_url=/ArticleList.nhn%3Fsearch.clubid=21278291%26search.menuid=177%26search.boardtype=W">칼럼 보러가기</a>
+    <aside class="detail-link">
+      <strong class="detail-link-title">매력에 대한 자세한 이해를 원한다면?</strong>
+      <div class="detail-attractive">
+        매력이란? - <a href="https://cafe.naver.com/dabidonline/22601">칼럼 보러가기</a>
+      </div>
+      <div class="detail-meetagain">
+        더욱 디테일한 재회의 기술 - <a href="https://cafe.naver.com/dabidonline?iframe_url=/ArticleList.nhn%3Fsearch.clubid=21278291%26search.menuid=177%26search.boardtype=W">칼럼 보러가기</a>
+      </div>
     </aside>
   </div>
 </div>
@@ -90,7 +93,7 @@ export default {
 
 .result-contents, .turning-point-contents {
   line-height: 20px;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .turning-point {
@@ -110,5 +113,26 @@ export default {
 .banner-link {
   display: block;
   margin-top: 30px;
+}
+
+.detail-link {
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+.detail-link-title {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+.detail-attractive {
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+}
+
+.detail-meetagain {
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
 }
 </style>

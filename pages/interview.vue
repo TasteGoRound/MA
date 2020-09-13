@@ -4,9 +4,11 @@
     <ul class="interview" :style="transformQuestionItem">
       <li class="item" v-for="(question, questionIndex) in questions" :key="questionIndex">
         <div class="item-bag">
-          <em class="number">Q{{ questionIndex + 1 }}</em>
-          <div class="question-bag">
-            <strong class="question">{{ question.interview }}</strong>
+          <div>
+            <em class="number">Q{{ questionIndex + 1 }}</em>
+            <div class="question-bag">
+              <strong class="question">{{ question.interview }}</strong>
+            </div>
           </div>
           <div class="answer-bag">
             <template v-for="(option, optionIndex) in question.options">
@@ -122,6 +124,10 @@ export default {
   min-width: 100%;
   flex-shrink: 0;
   .item-bag {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding: 0 10px;
   }
 }
@@ -130,7 +136,7 @@ export default {
   display: block;
   font-family: Arial;
   font-weight: bolder;
-  font-size: 50px;
+  font-size: 1.5rem;
   color: var(--main-point-color);
 }
 
