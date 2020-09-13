@@ -14,7 +14,7 @@ $ npm run build
 $ npm run start
 
 # generate static project
-$ npm run generate --publish=true
+$ npm run generate
 
 # deploy project
 $ npm run deploy
